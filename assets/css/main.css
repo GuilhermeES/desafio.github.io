@@ -1,0 +1,436 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+@import url('reset.css');
+
+:root{
+    --color-1: #FAA500;
+    --color-2: #353535;
+    --color-3: #787D83;
+    --color-4: #EFEFEF;
+    --color-5: #464B54;
+}
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9;
+}
+.overlay.active{
+    display: block;
+}
+
+.modal-content{
+    border-radius: 0;
+    border: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+.modal-dialog{
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
+.modal-close{
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.modal-dialog{
+    max-width: 900px;
+}
+
+/* Estilo dos títulos */
+
+.title-1{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.title-2{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.title-3{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.maeztra-title{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--color-5);
+}
+
+.modal-maeztra-desc{
+    color: var(--color-3);
+}
+
+/* Estilo dos formulários */
+
+.form-maeztra{
+    background-color: var(--color-4);
+    border: none;
+    font-size: 12px;
+    color: var(--color-2);
+    height: 40px;
+}
+
+.form-maeztra:focus{
+    outline: none;
+    box-shadow: unset;
+    background-color: var(--color-4);
+}
+
+.form-maeztra--ghost{
+    background-color: transparent;
+    font-size: 14px;
+    border: 1px solid var(--color-2);
+}
+
+/* Estilo dos botoões */
+
+.btn-maeztra{
+    background-color: var(--color-1);
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 38px;
+    padding-right: 38px;
+}
+
+.btn-maeztra:hover, .btn-maeztra:active{
+    background-color: var(--color-1) !important;
+    color: #ffffff !important;
+    box-shadow: none;
+}
+
+.btn-border{
+    border-radius: 8px;
+    border: 1px solid var(--color-1);
+    padding: 12px 14px 13px 17px;
+}
+
+.btn-account{
+    font-size: 14px;
+}
+
+.btn-maeztra--header{
+    position: relative;
+    right: 8px;
+}
+
+.btn-maeztra--product{
+    font-size: 16px;
+    width: 87%;
+}
+
+.btn-maeztra--large{
+    height: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Estilo do header */
+
+.header__top{
+    background-color: var(--color-2);
+}
+
+.header__top p{
+    color: #ffffff;
+}
+
+.header__mid{
+    background: #FFF;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header__mid-items{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.4fr 1.4fr 1fr;
+}
+
+.header__mobile{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.header__nav{
+    background-color: #fff;
+    margin-top: 16px;
+}
+
+.header__link{
+    color: var(--color-2);
+    font-size: 14px;
+}
+
+.header__link.active{
+    color: var(--color-1);
+    font-weight: 700;
+}
+
+.header__item{
+    margin-right: 92px;
+}
+
+/* Estilo do secao s-banner */
+
+.banner__layer{
+    display: flex;
+    align-items: center;
+}
+
+.banner__img{
+    position: relative;
+    z-index: -4;
+}
+
+.banner__text{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.banner__text h1{
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.banner__text p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 32px;
+}
+
+
+/* Estilo do secao s-maeztra */
+.s-maeztra{
+    padding-top: 30px;
+}
+
+.maeztra__card h3{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.maeztra__card p{
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.maeztra__card img{
+    margin-right: 22px;
+}
+
+.maeztra__card{
+    border-radius: 4px;
+    background-color: #EFEFEF;
+    padding:12px 27px 12px 27px;
+}
+
+/* Estilo do secao s-brands */
+
+.s-brands{
+    padding-top: 74px;
+}
+
+/* Estilo do secao s-products */
+
+.s-products{
+    padding-top: 80px;
+}
+
+.products__color{
+    background-color: #DEAC71;
+    width: 27px;
+    height: 27px;
+    border-radius: 4px;
+}
+
+.products__color:nth-child(2){
+    background-color: #D37164;
+}
+
+.products__color:nth-child(3){
+    background-color: #6497D3;
+}
+
+.products__color:nth-child(4){
+    background-color: #3C3B79;
+}
+
+.products__value{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.products__desc{
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+
+/* Estilo do secao s-collection */
+
+.s-collection{
+    margin-top: 60px;
+}
+
+/* Estilo do footer */
+
+.footer__newsletter{
+    margin-top: 80px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+.footer__nav{
+    margin-top: 40px;
+    margin-bottom: 64px;
+}
+
+.footer__links{
+    margin-top: 24px;
+}
+
+.footer__links li{
+    margin-bottom: 24px;
+}
+
+.footer__links li:last-child{
+    margin-bottom: 0;
+}
+
+.footer__bot{
+    background-color: var(--color-2);
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.footer__info{
+    font-size: 10px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+@media(max-width:576px) {
+
+    .title-1{
+        font-size: 24px;
+    }
+
+    .swiper-navigation{
+        display: none;
+    }
+
+    .swiper-banner .swiper-navigation {
+        display: block !important;
+    }
+
+    .modal-content{
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    
+    /* Estilo dos botoões */
+
+    .btn-maeztra--header{
+        position: unset;
+    }
+
+    /* Estilo do header */
+
+    .header__top p{
+        font-size: 10px;
+    }
+
+    /* Estilo do secao s-banner*/
+    .banner__text p{
+        font-size: 16px;
+    }
+
+    .banner__text{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* Estilo do secao s-products */
+    .s-brands{
+        padding-top: 40px;
+    }
+
+    /* Estilo do secao s-products */
+
+    .s-products{
+        padding-top: 40px;
+    }
+
+    .container--no-padding{
+        padding-right: 0;
+    }
+
+    /* Estilo do footer */
+    
+    .footer__links {
+        display: none;
+    }
+
+    .footer__form{
+        gap: 10px;
+    }
+    
+    .footer__links.show {
+        display: block;
+    }
+
+    .footer__newsletter{
+        background-color: #FAFAFA;
+    }
+}
+
+@media(max-width:1199px) {
+
+    .header__nav{
+        display: none;
+        position: fixed;
+        width: 70%;
+        left: 0;
+        height: 100vh;
+        top: 0;
+        z-index: 10;
+        margin-top: 0;
+    }
+
+    .header__nav.open{
+        display: block;
+    }
+
+    .header__item{
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .header__link {
+        font-size: 24px;
+    }
+}
